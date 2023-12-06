@@ -1,17 +1,15 @@
-# Svorak A5
+# Svorak
 
-My Swedish Dvorak programmer keyboard layout
-
-This layout is based on [Svorak A5](http://aoeu.info/layouts/files/magnus-xkb-se) from [aoeu.info](http://aoeu.info/). Then I have moved, added and removed some keys.
+Based on the forked repo. Forked it to keep track of my own changes, since it tends to be overwritten by updates.
 
 ## Installation
 
-To install the layout into your X server you copy the layout into the Swedish symbols file:
-```bash
-$ cat svorak_a5 >> /usr/share/X11/xkb/symbols/se
-```
+1. Edit `/usr/share/X11/xkb/symbols/se`
+2. Overwrite the keybinds in an existing layout that you don't need.
+3. Save as sudo.
+4. Log out and log back in.
+5. Select the keyboard layout in Settings.
 
-Now the layout can be activated with:
-```bash
-$ setxkbmap se svorak
-```
+## Why?
+Some applications like terminal and password prompts seem to use the first keyboard layout in the list in Settings. I couldn't find a way to make `setxkbmap` work with the terminal.
+Also, adding new layouts is more complicated than just overwriting an old one. It's not like we need more than one.
